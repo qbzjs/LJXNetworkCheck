@@ -14,5 +14,7 @@
 + (instancetype)sharedNetworkCheck;
 + (BOOL)isConnect;
 + (NetworkStatus)currentNetworkState;
+/** 获取MCC MNC */
++ (NSString *)getMCCAndMNC;
 
 @end

@@ -26,6 +26,7 @@
  */
 
 #import "Reachability.h"
+#import <UIKit/UIKit.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
 NSString *const kReachabilityChangedNotification = @"kReachabilityChangedNotification";
@@ -41,6 +42,7 @@ NSString *const kReachabilityChangedNotification = @"kReachabilityChangedNotific
 
 #pragma mark - =================add by qiukai==================begin
 #define kShouldPrintReachabilityFlags 1
+#define LOG_DEBUG(fmt, ...) NSLog((@"[DEBUG] %s [Line %d] --- " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 
 static void PrintReachabilityFlags(SCNetworkReachabilityFlags flags, const char* comment)
 {

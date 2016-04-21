@@ -16,7 +16,7 @@
 		5E3678051CC8D4CE0071858B /* LJXNetworkCheckDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3678041CC8D4CE0071858B /* LJXNetworkCheckDemoTests.m */; };
 		5E3678101CC8D4CE0071858B /* LJXNetworkCheckDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E36780F1CC8D4CE0071858B /* LJXNetworkCheckDemoUITests.m */; };
 		5E3678201CC8D5080071858B /* LJXNetworkCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E36781F1CC8D5080071858B /* LJXNetworkCheck.m */; };
-		5E3678231CC8D5410071858B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3678221CC8D5410071858B /* Reachability.m */; };
+		5E3678231CC8D5410071858B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3678221CC8D5410071858B /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -516,6 +516,7 @@
 				5E3678161CC8D4CE0071858B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E3678171CC8D4CE0071858B /* Build configuration list for PBXNativeTarget "LJXNetworkCheckDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +525,7 @@
 				5E3678191CC8D4CE0071858B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E36781A1CC8D4CE0071858B /* Build configuration list for PBXNativeTarget "LJXNetworkCheckDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +534,7 @@
 				5E36781C1CC8D4CE0071858B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

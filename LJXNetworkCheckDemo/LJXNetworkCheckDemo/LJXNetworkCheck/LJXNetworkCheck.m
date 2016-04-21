@@ -7,6 +7,8 @@
 //
 
 #import "LJXNetworkCheck.h"
+#import <CoreTelephony/CTCarrier.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
 @interface LJXNetworkCheck ()
 
@@ -108,5 +110,13 @@ static id instance = nil;
     }
 }
 
++ (NSString *)getMCCAndMNC {
+    CTTelephonyNetworkInfo *netInfo    = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier              *carrier    = [netInfo subscriberCellularProvider];
+    NSString               *MCC        = [carrier mobileCountryCode];
+    NSString               *MNC        = [carrier mobileNetworkCode];
+    NSString               *MCCAndMNC  = [MCC stringByAppendingString:MNC];
+    return MCCAndMNC;
+}
 
 @end

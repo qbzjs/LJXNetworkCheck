@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Reachability.h"
 
 @interface LJXNetworkCheck : NSObject
+
++ (instancetype)sharedNetworkCheck;
++ (BOOL)isConnect;
++ (NetworkStatus)currentNetworkState;
 
 @end

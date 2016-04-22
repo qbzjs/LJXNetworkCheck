@@ -12,7 +12,9 @@
 @interface LJXNetworkCheck : NSObject
 
 + (instancetype)sharedNetworkCheck;
+/** 是否有网络 */
 + (BOOL)isConnect;
+/** 当前网络状态 */
 + (NetworkStatus)currentNetworkState;
 /** 获取MCC MNC */
 + (NSString *)getMCCAndMNC;

@@ -18,13 +18,11 @@
 
 @implementation LJXNetworkCheck
 
-+ (instancetype)sharedNetworkCheck
-{
++ (instancetype)sharedNetworkCheck {
     return [[self alloc] init];
 }
 
-+ (void)initialize
-{
++ (void)initialize {
     static BOOL isInitialize = NO;
     if (!isInitialize) {
         instance = [[self alloc] init];
@@ -32,8 +30,7 @@
 }
 
 static id instance = nil;
-+ (id)allocWithZone:(struct _NSZone *)zone
-{
++ (id)allocWithZone:(struct _NSZone *)zone {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (instance == nil) {
@@ -43,13 +40,11 @@ static id instance = nil;
     return instance;
 }
 
-- (id)copyWithZone:(NSZone *)zone
-{
+- (id)copyWithZone:(NSZone *)zone {
     return instance;
 }
 
-- (id)mutableCopyWithZone:(NSZone *)zone
-{
+- (id)mutableCopyWithZone:(NSZone *)zone {
     return instance;
 }
 
@@ -58,10 +53,9 @@ static id instance = nil;
  *
  *  @return YES表示有网，NO表示无网
  */
-+ (BOOL)isConnect
-{
++ (BOOL)isConnect {
     Reachability *reachForBaidu = [Reachability reachabilityWithHostname:@"www.baidu.com"];
-    Reachability *reachForQQ = [Reachability reachabilityWithHostname:@"www.qq.com"];
+    Reachability *reachForQQ    = [Reachability reachabilityWithHostname:@"www.qq.com"];
     if(([reachForBaidu currentReachabilityStatus] == NotReachable)&&([reachForQQ currentReachabilityStatus] == NotReachable)) {
         return NO;
     } else {
@@ -69,8 +63,7 @@ static id instance = nil;
     }
 }
 
-+ (NetworkStatus)currentNetworkState
-{
++ (NetworkStatus)currentNetworkState {
     Reachability *WIFI = [Reachability reachabilityForLocalWiFi];
     Reachability *conn = [Reachability reachabilityForInternetConnection];
     if ([WIFI currentReachabilityStatus] != NotReachable) {
